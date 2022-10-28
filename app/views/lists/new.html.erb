@@ -1,0 +1,13 @@
+<h1>Lists#new</h1>
+<p>Find me in app/views/lists/new.html.erb</p>
+
+<%= simple_form_for (@list) do |f| %>
+  <%= f.input :name %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "Delete",
+  list_path(@list),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+<%= link_to "Create a new bookmark"%>
